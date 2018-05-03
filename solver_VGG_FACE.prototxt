@@ -1,0 +1,17 @@
+test_iter: 400 #多少次测试完验证集，test_iter* batchsize（测试集的）=测试集的大小，测试集的 batchsize可以在prototx文件里设置
+test_interval: 2000 #每迭代test_interval次就进行一次测试
+test_initialization: false #是否接着上一次开始训练
+base_lr: 0.001 #开始的学习率
+display: 50
+max_iter: 80000 #156250 #50个epoch
+lr_policy: "step" 
+gamma: 0.1 #每隔stepsize代，学习率*gamma
+momentum: 0.9 # w-:m*w-lr*df/dw 中的m,在权重前的系数
+weight_decay: 0.0005 #放在正则项（regularization）前面的一个系数
+stepsize: 39062 #每隔stepsize代，学习率*gamma
+snapshot: 50000
+snapshot_prefix: "./snapshot/res50face"
+
+solver_mode: GPU
+net: "train_val_vgg16_no_lmbd.prototxt"
+solver_type: SGD

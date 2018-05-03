@@ -1,0 +1,1 @@
+/data/Experiments/caffe/build/tools/extract_features.bin /data/zhangming/vgg_face/snapshot/vgg_face_iter_100000.caffemodel /data/zhangming/vgg_face/features/train_val_vgg16_no_lmbd_feature.prototxt fc7 /data/zhangming/vgg_face/features/features 10 lmdb GPU
